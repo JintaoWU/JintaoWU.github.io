@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ceforces D. Appleman and Tree | plutolove&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="题意：给定一个棵树，树上每个节点不是黑色就是白色。删除 k 条边，使得构成的 k+1 个联通块，没个联通块只有一个黑色的点，求 k 条边的集合有多少种情况。
+
+分析：树形dp，dp[u][0]表示以 u 为跟的不包含黑色点的方案数，dp[u][1]表示以 u 为跟，包含一个黑色点的方案数。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ceforces D. Appleman and Tree">
+<meta property="og:url" content="plutolive.bitbucket.org/2014/09/25/Ceforces-D-Appleman-and-Tree/">
+<meta property="og:site_name" content="plutolove's Blog">
+<meta property="og:description" content="题意：给定一个棵树，树上每个节点不是黑色就是白色。删除 k 条边，使得构成的 k+1 个联通块，没个联通块只有一个黑色的点，求 k 条边的集合有多少种情况。
+
+分析：树形dp，dp[u][0]表示以 u 为跟的不包含黑色点的方案数，dp[u][1]表示以 u 为跟，包含一个黑色点的方案数。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ceforces D. Appleman and Tree">
+<meta name="twitter:description" content="题意：给定一个棵树，树上每个节点不是黑色就是白色。删除 k 条边，使得构成的 k+1 个联通块，没个联通块只有一个黑色的点，求 k 条边的集合有多少种情况。
+
+分析：树形dp，dp[u][0]表示以 u 为跟的不包含黑色点的方案数，dp[u][1]表示以 u 为跟，包含一个黑色点的方案数。">
+
+  
+    <link rel="alternative" href="/atom.xml" title="plutolove&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://avatars2.githubusercontent.com/u/8512477">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">plutolove</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
+					
+						<li><a href="/">主页</a></li>
+			        
+						<li><a href="/archives">所有文章</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/plutolove" title="github">github</a>
+				        
+							<a class="weibo" target="_blank" href="http://weibo.com/plutolove" title="weibo">weibo</a>
+				        
+							<a class="rss" target="_blank" href="http://feed.feedsky.com/plutolove" title="rss">rss</a>
+				        
+							<a class="facebook" target="_blank" href="/#" title="facebook">facebook</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="/tags/dp/" style="font-size: NaNpx;">dp</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars2.githubusercontent.com/u/8512477">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">plutolove</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/plutolove" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/plutolove" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="http://feed.feedsky.com/plutolove" title="rss">rss</a>
+			        
+						<a class="facebook" target="_blank" href="/#" title="facebook">facebook</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-Ceforces-D-Appleman-and-Tree" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/25/Ceforces-D-Appleman-and-Tree/" class="article-date">
+  	<time datetime="2014-09-25T12:17:39.000Z" itemprop="datePublished">Sep 25 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dp/">dp</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Ceforces D. Appleman and Tree
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>题意：给定一个棵树，树上每个节点不是黑色就是白色。删除 k 条边，使得构成的 k+1 个联通块，没个联通块只有一个黑色的点，求 k 条边的集合有多少种情况。</p>
+<hr>
+<p>分析：树形dp，dp[u][0]表示以 u 为跟的不包含黑色点的方案数，dp[u][1]表示以 u 为跟，包含一个黑色点的方案数。</p>
+<hr>
+<a id="more"></a>
+
+<figure class="highlight Java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"><span class="keyword">import</span> java.io.*;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">round263D</span> </span>{</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String args[]) <span class="keyword">throws</span> Exception{</div><div class="line">        cf462D solve=<span class="keyword">new</span> cf462D();</div><div class="line">        solve.input();</div><div class="line">        solve.dfs(-<span class="number">1</span>,<span class="number">0</span>);</div><div class="line">        System.out.println(solve.dp[<span class="number">0</span>][<span class="number">1</span>]);</div><div class="line">    }</div><div class="line">}</div><div class="line">class cf462D {</div><div class="line">    <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> N=<span class="number">100005</span>;</div><div class="line">    <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">long</span> mod=<span class="number">1000000007</span>;</div><div class="line">    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; g;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">long</span> dp[][]=<span class="keyword">new</span> <span class="keyword">long</span>[N][<span class="number">2</span>];</div><div class="line">    <span class="keyword">int</span> color[]=<span class="keyword">new</span> <span class="keyword">int</span> [N];</div><div class="line">    <span class="keyword">int</span> next[]=<span class="keyword">new</span> <span class="keyword">int</span> [N];</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">input</span>() <span class="keyword">throws</span> Exception{</div><div class="line">        <span class="comment">//System.setIn(new BufferedInputStream(new FileInputStream("in.txt")));</span></div><div class="line">        Scanner in=<span class="keyword">new</span> Scanner(System.in);</div><div class="line">        n=in.nextInt();</div><div class="line">        g=<span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-<span class="number">1</span>;i++) {</div><div class="line">            next[i]=in.nextInt();</div><div class="line">        }</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) {</div><div class="line">            color[i]=in.nextInt();</div><div class="line">            g.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;());</div><div class="line">            Arrays.fill(dp[i],<span class="number">0</span>);</div><div class="line">        }</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n-<span class="number">1</span>;i++) {</div><div class="line">            g.get(i+<span class="number">1</span>).add(next[i]);</div><div class="line">            g.get(next[i]).add(i+<span class="number">1</span>);</div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span>(<span class="keyword">int</span> f,<span class="keyword">int</span> u) {</div><div class="line">        dp[u][color[u]]=<span class="number">1</span>;</div><div class="line">        dp[u][color[u]^<span class="number">1</span>]=<span class="number">0</span>;</div><div class="line">        ArrayList&lt;Integer&gt; tmp=g.get(u);</div><div class="line">        <span class="keyword">for</span>(Integer v:tmp) {</div><div class="line">            <span class="keyword">if</span>(v==f) <span class="keyword">continue</span>;</div><div class="line">            dfs(u,v);</div><div class="line">            dp[u][<span class="number">1</span>]=((((dp[v][<span class="number">0</span>]+dp[v][<span class="number">1</span>])%mod)*dp[u][<span class="number">1</span>])%mod+dp[u][<span class="number">0</span>]*dp[v][<span class="number">1</span>])%mod;</div><div class="line">            dp[u][<span class="number">0</span>]=((dp[v][<span class="number">0</span>]+dp[v][<span class="number">1</span>])%mod)*dp[u][<span class="number">0</span>]%mod;<span class="comment">//dp[v][0]表示加边，dp[v][1]表示删边</span></div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a href="plutolive.bitbucket.org/2014/09/25/Ceforces-D-Appleman-and-Tree/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/09/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Ceforces-D-Appleman-and-Tree" data-title="Ceforces D. Appleman and Tree" data-url="plutolive.bitbucket.org/2014/09/25/Ceforces-D-Appleman-and-Tree/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2014 plutolove
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="/js/main.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
