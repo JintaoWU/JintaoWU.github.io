@@ -80,7 +80,7 @@
 			
 			<section class="second-part">
 				<div class="widget tagcloud">
-					<a href="/tags/dp/" style="font-size: NaNpx;">dp</a>
+					<a href="/tags/dfs/" style="font-size: 10.00px;">dfs</a><a href="/tags/dp/" style="font-size: 20.00px;">dp</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 10.00px;">others</a>
 				</div>
 			</section>
 			
@@ -129,6 +129,274 @@
 </nav>
       
   
+    <article id="post-弦图判定" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/25/弦图判定/" class="article-date">
+  	<time datetime="2014-09-25T12:24:05.000Z" itemprop="datePublished">Sep 25 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/graphs/">graphs</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/25/弦图判定/">弦图判定</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>弦：连接环中不相邻的两个点的边。  </p>
+<p>弦图：一个无向图称为弦图当图中任意长度大于3的环都至少有一个弦。  </p>
+<p>团：满足G为关于V的完全图的图。  </p>
+<p>单纯点：设N(v)表示与点v相邻的点集。一个点称为单纯点当{v} + N(v)的诱导子图为一个团。  </p>
+<p>完美消除序列：一个点的序列(每个点出现且恰好出现一次)v1, v2, …, vn满足vi<br>在{vi, vi+1,…,vn}的诱导子图中为一个单纯点。<br>
+        
+          <p class="article-more-link">
+            <a href="/2014/09/25/弦图判定/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a href="plutolive.bitbucket.org/2014/09/25/弦图判定/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-ZOJ-3812-We-Need-Medicine" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/25/ZOJ-3812-We-Need-Medicine/" class="article-date">
+  	<time datetime="2014-09-25T12:23:10.000Z" itemprop="datePublished">Sep 25 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dp/">dp</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/25/ZOJ-3812-We-Need-Medicine/">ZOJ 3812 We Need Medicine</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>题意：给 n 个物品，物品 i 有两个属性，wi和ti。有 m 个查询，查询包含两属性 mi 和 si，表示能否在<br> n 个物品种选取某几个使得 sum(wi)==mi &amp;&amp; sum(ti)==si,可以的话输出方案，不能输出“No solution!”。<br>数据范围：{ (1 &lt;= n &lt;= 400),(1 &lt;= m &lt;= 400),(1 &lt;= wi &lt;= 50),(1 &lt;= ti &lt;= 200000),(1 &lt;= mi &lt;= 50),(1 &lt;= si &lt;= 200000)}</p>
+<hr>
+<p>分析：动态规划，普通方法超时超内存，所以要优化。<br>用 dp[x] 表示 mi==x 时 si 的状态，用bitset优化，记录路径时也要优化，每10个物品分一组记录，输出路径用dfs</p>
+<hr>
+
+        
+          <p class="article-more-link">
+            <a href="/2014/09/25/ZOJ-3812-We-Need-Medicine/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a href="plutolive.bitbucket.org/2014/09/25/ZOJ-3812-We-Need-Medicine/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Ural-1077-Travelling-Tours" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/25/Ural-1077-Travelling-Tours/" class="article-date">
+  	<time datetime="2014-09-25T12:22:27.000Z" itemprop="datePublished">Sep 25 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dfs/">dfs</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/25/Ural-1077-Travelling-Tours/">Ural-1077. Travelling Tours</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>题意：给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环<br>至少有一条边不一样。</p>
+<hr>
+<p>分析：n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归<br>输出即可。<br>
+        
+          <p class="article-more-link">
+            <a href="/2014/09/25/Ural-1077-Travelling-Tours/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a href="plutolive.bitbucket.org/2014/09/25/Ural-1077-Travelling-Tours/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Codeforces-E-Very-simple-problem" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/25/Codeforces-E-Very-simple-problem/" class="article-date">
+  	<time datetime="2014-09-25T12:21:12.000Z" itemprop="datePublished">Sep 25 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/others/">others</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/25/Codeforces-E-Very-simple-problem/">Codeforces-E. Very simple problem</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>题意：给定一个凸多边形，给定一些点，查询这些点被多少个三角形包含</p>
+<hr>
+<p>分析：求出来不包含该点的三角形个数，用总个数减去这些即可。</p>
+<hr>
+
+        
+          <p class="article-more-link">
+            <a href="/2014/09/25/Codeforces-E-Very-simple-problem/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a href="plutolive.bitbucket.org/2014/09/25/Codeforces-E-Very-simple-problem/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Codeforces-D-Beautiful-numbers" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/25/Codeforces-D-Beautiful-numbers/" class="article-date">
+  	<time datetime="2014-09-25T12:20:06.000Z" itemprop="datePublished">Sep 25 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dp/">dp</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/25/Codeforces-D-Beautiful-numbers/">Codeforces-D. Beautiful numbers</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>题意：给定一个区间，求区间内满足条件的数字的个数。条件：数字 x 的每一位能被 x 整除。</p>
+<hr>
+<p>分析：数位dp，由题意可知，只要该数字能整除 1 到 9的最小公倍数（2520），那么肯定可以整除 1 到 9所有的数字。dp[i][st][j] 表示前 i 位，每位含有数字的状态位 st ，对 2520取余的余数。</p>
+<hr>
+
+        
+          <p class="article-more-link">
+            <a href="/2014/09/25/Codeforces-D-Beautiful-numbers/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a href="plutolive.bitbucket.org/2014/09/25/Codeforces-D-Beautiful-numbers/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-Ceforces-D-Appleman-and-Tree" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -170,63 +438,6 @@
     <footer class="article-footer">
       
         <a href="plutolive.bitbucket.org/2014/09/25/Ceforces-D-Appleman-and-Tree/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/09/25/hello-world/" class="article-date">
-  	<time datetime="2014-09-25T12:16:08.000Z" itemprop="datePublished">Sep 25 2014</time>
-</a>
-      
-      
-    </div>
-  
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/25/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-
-        
-          <p class="article-more-link">
-            <a href="/2014/09/25/hello-world/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a href="plutolive.bitbucket.org/2014/09/25/hello-world/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
