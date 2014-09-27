@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2014 ACM/ICPC Asia Regional Shanghai Online  | plutolove&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1003-Contest
+题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。
+
+分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2014 ACM/ICPC Asia Regional Shanghai Online ">
+<meta property="og:url" content="plutolive.bitbucket.org/2014/09/27/2014-ACMICPC-Asia-Regional-Shanghai-Online-/">
+<meta property="og:site_name" content="plutolove's Blog">
+<meta property="og:description" content="1003-Contest
+题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。
+
+分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2014 ACM/ICPC Asia Regional Shanghai Online ">
+<meta name="twitter:description" content="1003-Contest
+题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。
+
+分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回">
+
+  
+    <link rel="alternative" href="/atom.xml" title="plutolove&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://avatars2.githubusercontent.com/u/8512477">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">plutolove</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
+					
+						<li><a href="/">主页</a></li>
+			        
+						<li><a href="/archives">所有文章</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/plutolove" title="github">github</a>
+				        
+							<a class="facebook" target="_blank" href="https://www.facebook.com/mengshangqi" title="facebook">facebook</a>
+				        
+							<a class="google" target="_blank" href="https://plus.google.com" title="google">google</a>
+				        
+							<a class="twitter" target="_blank" href="https://twitter.com/mengshangqi" title="twitter">twitter</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="/tags/dfs/" style="font-size: 10.00px;">dfs</a><a href="/tags/dp/" style="font-size: 20.00px;">dp</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 15.00px;">others</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars2.githubusercontent.com/u/8512477">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">plutolove</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/plutolove" title="github">github</a>
+			        
+						<a class="facebook" target="_blank" href="https://www.facebook.com/mengshangqi" title="facebook">facebook</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com" title="google">google</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/mengshangqi" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-2014-ACMICPC-Asia-Regional-Shanghai-Online-" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/27/2014-ACMICPC-Asia-Regional-Shanghai-Online-/" class="article-date">
+  	<time datetime="2014-09-27T09:23:13.000Z" itemprop="datePublished">Sep 27 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/others/">others</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2014 ACM/ICPC Asia Regional Shanghai Online 
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1003-Contest"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5045" target="_blank" rel="external">1003-Contest</a></h1>
+<p>题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。</p>
+<hr>
+<p>分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。<br>dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回答这个问题的人可以是任何人。</p>
+<hr>
+<h1 id="1004-Airport"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5046" target="_blank" rel="external">1004-Airport</a></h1>
+<p>题意：给 n 个城市，每个城市有一个坐标，要建 k 个飞机场，每个城市有一个value值，是这个城市到其他所有机场距离的最小值，求所有城市中 value 最大的最小值。</p>
+<hr>
+<p>分析：二分+Dancing Links重复覆盖<br><a id="more"></a></p>
+<hr>
+<h1 id="1005-Sawtooth"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5047" target="_blank" rel="external">1005-Sawtooth</a></h1>
+<p>题意：给定一个无穷大平面，给定 M 的个数，求这些 M 能将平面划分成部分。</p>
+<hr>
+<p>分析：数学规律 ans=8×n×n-7×n+1</p>
+<hr>
+<h1 id="1008-Divided_Land"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5050" target="_blank" rel="external">1008-Divided Land</a></h1>
+<p>题意：给定 n×m 的矩形，将其划分成正方形，每个正方形都相等，求正方形最大的边长</p>
+<hr>
+<p>分析：求出 n 和 m 的最大公约数即可<br>1003代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;string&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1005</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> M=<span class="number">15</span>;</div><div class="line"><span class="keyword">double</span> p[M][N];</div><div class="line"><span class="keyword">double</span> dp[N][(<span class="number">1</span>&lt;&lt;<span class="number">11</span>)-<span class="number">1</span>];</div><div class="line"><span class="keyword">void</span> init() {</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) {</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=(<span class="number">1</span>&lt;&lt;<span class="number">10</span>);j++) {</div><div class="line">            dp[i][j]=-<span class="number">99999</span>;</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div><div class="line"><span class="keyword">int</span> main() {</div><div class="line"><span class="preprocessor">#ifndef ONLINE_JUDGE</span></div><div class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,stdin);</div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">    <span class="keyword">int</span> t;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&t);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> kc=<span class="number">1</span>;kc&lt;=t;kc++) {</div><div class="line">        <span class="keyword">int</span> n,m;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&n,&m);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) {</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) {</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&p[i][j]);</div><div class="line">            }</div><div class="line">        }</div><div class="line">        init();</div><div class="line">        dp[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> all=(<span class="number">1</span>&lt;&lt;n)-<span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) {</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;n);s++) {</div><div class="line">                <span class="keyword">int</span> now=s;</div><div class="line">                <span class="keyword">if</span>(now==all) now=<span class="number">0</span>;</div><div class="line">                <span class="keyword">if</span>(dp[i-<span class="number">1</span>][s]&lt;<span class="number">0</span>) <span class="keyword">continue</span>;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++) {</div><div class="line">                    <span class="keyword">int</span> next=(<span class="number">1</span>&lt;&lt;k);</div><div class="line">                    <span class="keyword">if</span>(now&next) <span class="keyword">continue</span>;</div><div class="line">                    dp[i][now|next]=max(dp[i][now|next],dp[i-<span class="number">1</span>][s]+p[k+<span class="number">1</span>][i]);</div><div class="line">                }</div><div class="line">            }</div><div class="line">        }</div><div class="line">        <span class="keyword">double</span> ans=-<span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=all;i++) {</div><div class="line">            ans=max(ans,dp[m][i]);</div><div class="line">        }</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Case #%d: %.5lf\n"</span>,kc,ans);</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/09/25/弦图判定/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">弦图判定</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2014-ACMICPC-Asia-Regional-Shanghai-Online-" data-title="2014 ACM/ICPC Asia Regional Shanghai Online " data-url="plutolive.bitbucket.org/2014/09/27/2014-ACMICPC-Asia-Regional-Shanghai-Online-/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2014 plutolove
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="/js/main.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
