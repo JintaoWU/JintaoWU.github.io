@@ -6,23 +6,20 @@
   <title>2014 ACM/ICPC Asia Regional Shanghai Online  | plutolove&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1003-Contest
-题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。
-
-分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回">
+题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。  
+分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2014 ACM/ICPC Asia Regional Shanghai Online ">
 <meta property="og:url" content="http://plutolove.github.io/2014/09/27/2014-ACMICPC-Asia-Regional-Shanghai-Online-/">
 <meta property="og:site_name" content="plutolove's Blog">
 <meta property="og:description" content="1003-Contest
-题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。
-
-分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回">
+题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。  
+分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2014 ACM/ICPC Asia Regional Shanghai Online ">
 <meta name="twitter:description" content="1003-Contest
-题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。
-
-分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回">
+题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。  
+分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着">
 
   
     <link rel="alternative" href="/atom.xml" title="plutolove&#39;s Blog" type="application/atom+xml">
@@ -92,7 +89,7 @@
 			
 			<section class="second-part">
 				<div class="widget tagcloud">
-					<a href="/tags/dfs/" style="font-size: 10.00px;">dfs</a><a href="/tags/dp/" style="font-size: 20.00px;">dp</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 15.00px;">others</a>
+					<a href="/tags/Codeforces/" style="font-size: 20.00px;">Codeforces</a><a href="/tags/HDU/" style="font-size: 15.00px;">HDU</a><a href="/tags/Ural/" style="font-size: 15.00px;">Ural</a><a href="/tags/ZOJ/" style="font-size: 15.00px;">ZOJ</a><a href="/tags/dfs/" style="font-size: 10.00px;">dfs</a><a href="/tags/dp/" style="font-size: 10.00px;">dp</a><a href="/tags/graphs/" style="font-size: 15.00px;">graphs</a><a href="/tags/others/" style="font-size: 10.00px;">others</a>
 				</div>
 			</section>
 			
@@ -147,7 +144,7 @@
 </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/others/">others</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HDU/">HDU</a></li></ul>
 
     </div>
   
@@ -165,24 +162,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1003-Contest"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5045" target="_blank" rel="external">1003-Contest</a></h1>
-<p>题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。</p>
-<hr>
+        <h3 id="1003-Contest"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5045" target="_blank" rel="external">1003-Contest</a></h3>
+<p>题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。  </p>
 <p>分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。<br>dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回答这个问题的人可以是任何人。</p>
 <hr>
-<h1 id="1004-Airport"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5046" target="_blank" rel="external">1004-Airport</a></h1>
-<p>题意：给 n 个城市，每个城市有一个坐标，要建 k 个飞机场，每个城市有一个value值，是这个城市到其他所有机场距离的最小值，求所有城市中 value 最大的最小值。</p>
-<hr>
+<h3 id="1004-Airport"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5046" target="_blank" rel="external">1004-Airport</a></h3>
+<p>题意：给 n 个城市，每个城市有一个坐标，要建 k 个飞机场，每个城市有一个value值，是这个城市到其他所有机场距离的最小值，求所有城市中 value 最大的最小值。  </p>
 <p>分析：二分+Dancing Links重复覆盖<br><a id="more"></a></p>
 <hr>
-<h1 id="1005-Sawtooth"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5047" target="_blank" rel="external">1005-Sawtooth</a></h1>
-<p>题意：给定一个无穷大平面，给定 M 的个数，求这些 M 能将平面划分成部分。</p>
-<hr>
+<h3 id="1005-Sawtooth"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5047" target="_blank" rel="external">1005-Sawtooth</a></h3>
+<p>题意：给定一个无穷大平面，给定 M 的个数，求这些 M 能将平面划分成部分。  </p>
 <p>分析：数学规律 ans=8×n×n-7×n+1</p>
 <hr>
-<h1 id="1008-Divided_Land"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5050" target="_blank" rel="external">1008-Divided Land</a></h1>
-<p>题意：给定 n×m 的矩形，将其划分成正方形，每个正方形都相等，求正方形最大的边长</p>
-<hr>
+<h3 id="1008-Divided_Land"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5050" target="_blank" rel="external">1008-Divided Land</a></h3>
+<p>题意：给定 n×m 的矩形，将其划分成正方形，每个正方形都相等，求正方形最大的边长  </p>
 <p>分析：求出 n 和 m 的最大公约数即可<br>1003代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1005</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> M=<span class="number">15</span>;</div><div class="line"><span class="keyword">double</span> p[M][N];</div><div class="line"><span class="keyword">double</span> dp[N][(<span class="number">1</span>&lt;&lt;<span class="number">11</span>)-<span class="number">1</span>];</div><div class="line"><span class="keyword">void</span> init() {</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) {</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=(<span class="number">1</span>&lt;&lt;<span class="number">10</span>);j++) {</div><div class="line">            dp[i][j]=-<span class="number">99999</span>;</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div><div class="line"><span class="keyword">int</span> main() {</div><div class="line"><span class="preprocessor">#ifndef ONLINE_JUDGE</span></div><div class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,stdin);</div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">    <span class="keyword">int</span> t;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&t);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> kc=<span class="number">1</span>;kc&lt;=t;kc++) {</div><div class="line">        <span class="keyword">int</span> n,m;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&n,&m);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) {</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) {</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&p[i][j]);</div><div class="line">            }</div><div class="line">        }</div><div class="line">        init();</div><div class="line">        dp[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> all=(<span class="number">1</span>&lt;&lt;n)-<span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) {</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;(<span class="number">1</span>&lt;&lt;n);s++) {</div><div class="line">                <span class="keyword">int</span> now=s;</div><div class="line">                <span class="keyword">if</span>(now==all) now=<span class="number">0</span>;</div><div class="line">                <span class="keyword">if</span>(dp[i-<span class="number">1</span>][s]&lt;<span class="number">0</span>) <span class="keyword">continue</span>;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++) {</div><div class="line">                    <span class="keyword">int</span> next=(<span class="number">1</span>&lt;&lt;k);</div><div class="line">                    <span class="keyword">if</span>(now&next) <span class="keyword">continue</span>;</div><div class="line">                    dp[i][now|next]=max(dp[i][now|next],dp[i-<span class="number">1</span>][s]+p[k+<span class="number">1</span>][i]);</div><div class="line">                }</div><div class="line">            }</div><div class="line">        }</div><div class="line">        <span class="keyword">double</span> ans=-<span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=all;i++) {</div><div class="line">            ans=max(ans,dp[m][i]);</div><div class="line">        }</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Case #%d: %.5lf\n"</span>,kc,ans);</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
 
@@ -197,6 +190,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2014/09/28/Codeforces-Round-268-(Div-2)C,D,E/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Codeforces Round #268 (Div. 2)
+        
+      </div>
+    </a>
   
   
     <a href="/2014/09/25/弦图判定/" id="article-nav-older" class="article-nav-link-wrap">

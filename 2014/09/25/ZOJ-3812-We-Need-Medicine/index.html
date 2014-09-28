@@ -83,7 +83,7 @@
 			
 			<section class="second-part">
 				<div class="widget tagcloud">
-					<a href="/tags/dfs/" style="font-size: 10.00px;">dfs</a><a href="/tags/dp/" style="font-size: 20.00px;">dp</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 15.00px;">others</a>
+					<a href="/tags/Codeforces/" style="font-size: 20.00px;">Codeforces</a><a href="/tags/HDU/" style="font-size: 15.00px;">HDU</a><a href="/tags/Ural/" style="font-size: 15.00px;">Ural</a><a href="/tags/ZOJ/" style="font-size: 15.00px;">ZOJ</a><a href="/tags/dfs/" style="font-size: 10.00px;">dfs</a><a href="/tags/dp/" style="font-size: 10.00px;">dp</a><a href="/tags/graphs/" style="font-size: 15.00px;">graphs</a><a href="/tags/others/" style="font-size: 10.00px;">others</a>
 				</div>
 			</section>
 			
@@ -138,7 +138,7 @@
 </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dp/">dp</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ZOJ/">ZOJ</a></li></ul>
 
     </div>
   
@@ -156,7 +156,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题意：给 n 个物品，物品 i 有两个属性，wi和ti。有 m 个查询，查询包含两属性 mi 和 si，表示能否在<br> n 个物品种选取某几个使得 sum(wi)==mi &amp;&amp; sum(ti)==si,可以的话输出方案，不能输出“No solution!”。<br>数据范围：{ (1 &lt;= n &lt;= 400),(1 &lt;= m &lt;= 400),(1 &lt;= wi &lt;= 50),(1 &lt;= ti &lt;= 200000),(1 &lt;= mi &lt;= 50),(1 &lt;= si &lt;= 200000)}</p>
+        <p>题意：给 n 个物品，物品 i 有两个属性，wi和ti。有 m 个查询，查询包含两属性 mi 和 si，表示能否在<br> n 个物品种选取某几个使得 sum(wi)==mi &amp;&amp; sum(ti)==si,可以的话输出方案，不能输出“No solution!”。<br>数据范围：{ (1 &lt;= n &lt;= 400),(1 &lt;= m &lt;= 400),(1 &lt;= wi &lt;= 50),(1 &lt;= ti &lt;= 200000),(1 &lt;= mi &lt;= 50),(1 &lt;= si &lt;= 200000)}  </p>
 <hr>
 <p>分析：动态规划，普通方法超时超内存，所以要优化。<br>用 dp[x] 表示 mi==x 时 si 的状态，用bitset优化，记录路径时也要优化，每10个物品分一组记录，输出路径用dfs</p>
 <hr>
