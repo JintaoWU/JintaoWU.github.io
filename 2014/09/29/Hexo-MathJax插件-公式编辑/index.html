@@ -249,14 +249,11 @@
 
 <p>效果：<br>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
 <p><strong>Tag Block:</strong></p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123% math-block %&#125</div><div class="line">\begin{aligned}</div><div class="line">因为：\sum_{i=1}^{10^k}f(i) = 45<span class="emphasis">*k*</span>10^{k-1} \\</div><div class="line">\sum<span class="emphasis">_{i=x+1}^{x+10^{k}} = \sum_</span>{i=x}^{x+10^{k}-1}+1 \\</div><div class="line">令：mod=\sum_{i=1}^{10^k}f(i) = 45<span class="emphasis">*k*</span>10^{k-1} \% a \\</div><div class="line">那么：\sum_{i=a-mod}^{a-mod+10^k-1}f(i) \% a = 0 \\</div><div class="line">\end{aligned}</div><div class="line">&#123% endmath-block %&#125</div></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123% math-block %&#125</div><div class="line">\begin{aligned}</div><div class="line">\sum<span class="emphasis">_{i=x+1}^{x+10^{k}} = \sum_</span>{i=x}^{x+10^{k}-1}+1 \\</div><div class="line">\end{aligned}</div><div class="line">&#123% endmath-block %&#125</div></pre></td></tr></table></figure>
 
 <p>效果：</p>
 <span>$$\begin{aligned}
-因为：\sum_{i=1}^{10^k}f(i) = 45*k*10^{k-1} \\
 \sum_{i=x+1}^{x+10^{k}} = \sum_{i=x}^{x+10^{k}-1}+1 \\
-令：mod=\sum_{i=1}^{10^k}f(i) = 45*k*10^{k-1} \% a \\
-那么：\sum_{i=a-mod}^{a-mod+10^k-1}f(i) \% a = 0 \\
 \end{aligned}$$</span>
       
     </div>
