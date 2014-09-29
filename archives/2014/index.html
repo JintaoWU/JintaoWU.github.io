@@ -26,6 +26,36 @@
   <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
   <meta name="baidu-site-verification" content="CntQ3tYCKP" />
   <meta name="msvalidate.01" content="F3688EA880CE32DA55C52E5F38AE9D19" />
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </head>
 
 <body>
@@ -142,6 +172,31 @@
           <a href="/archives/2014" class="archive-year">2014</a>
         </div>
         <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2014/09/29/Hexo-MathJax插件-公式编辑/" class="archive-article-date">
+  	<time datetime="2014-09-29T15:09:49.000Z" itemprop="datePublished">Sep 29</time>
+</a>
+	      	<br>
+	      	
+	    	
+    	</div>
+    	
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2014/09/29/Hexo-MathJax插件-公式编辑/">Hexo MathJax插件 公式编辑</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+
+  
+    
     
     <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
@@ -382,6 +437,7 @@
   <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 
   <script src="/js/main.js" type="text/javascript"></script>
+
 
 
   </div>
