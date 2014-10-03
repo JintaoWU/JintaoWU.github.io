@@ -113,7 +113,7 @@
 			
 			<section class="second-part">
 				<div class="widget tagcloud">
-					<a href="/tags/Codeforces/" style="font-size: 20.00px;">Codeforces</a><a href="/tags/HDU/" style="font-size: 10.00px;">HDU</a><a href="/tags/Ural/" style="font-size: 10.00px;">Ural</a><a href="/tags/ZOJ/" style="font-size: 10.00px;">ZOJ</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 10.00px;">others</a>
+					<a href="/tags/Codeforces/" style="font-size: 20.00px;">Codeforces</a><a href="/tags/HDU/" style="font-size: 10.00px;">HDU</a><a href="/tags/SPOJ/" style="font-size: 10.00px;">SPOJ</a><a href="/tags/Ural/" style="font-size: 10.00px;">Ural</a><a href="/tags/ZOJ/" style="font-size: 10.00px;">ZOJ</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 10.00px;">others</a>
 				</div>
 			</section>
 			
@@ -161,6 +161,68 @@
 	</div>
 </nav>
       
+  
+    <article id="post-SPOJ-375-Query-on-a-tree" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/10/03/SPOJ-375-Query-on-a-tree/" class="article-date">
+  	<time datetime="2014-10-03T12:21:12.000Z" itemprop="datePublished">Oct 3 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SPOJ/">SPOJ</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/03/SPOJ-375-Query-on-a-tree/">SPOJ-375. Query on a tree</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="题意:">题意:</h3>
+<p>给定一棵含有<code>n</code>个节点的树，有两种操作。</p>
+<ul>
+<li>CHANGE i ti (将第<code>i</code>条边的值变为<code>ti</code>)。</li>
+<li>QUERY a b (求<code>a</code>到<code>b</code>路径上权值最大的边)。</li>
+</ul>
+<hr>
+<h3 id="分析：">分析：</h3>
+<p>树链剖分</p>
+<ul>
+<li><code>siz[u]</code>表示以<code>u</code>为根的子树的节点的个数。</li>
+<li><code>top[u]</code>表示所在链的端点。</li>
+<li><code>son[u]</code>表示<code>u</code>的子节点种<code>siz</code>值最大的点。</li>
+<li><code>dep[u]</code>表示<code>u</code>的深度。</li>
+<li><code>tid[u]</code>表示树变成链之后<code>u</code>的编号。
+        
+          <p class="article-more-link">
+            <a href="/2014/10/03/SPOJ-375-Query-on-a-tree/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-Hexo-MathJax插件-公式编辑" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -408,9 +470,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题意：给 n 个物品，物品 i 有两个属性，wi和ti。有 m 个查询，查询包含两属性 mi 和 si，表示能否在<br> n 个物品种选取某几个使得 sum(wi)==mi &amp;&amp; sum(ti)==si,可以的话输出方案，不能输出“No solution!”。<br>数据范围：{ (1 &lt;= n &lt;= 400),(1 &lt;= m &lt;= 400),(1 &lt;= wi &lt;= 50),(1 &lt;= ti &lt;= 200000),(1 &lt;= mi &lt;= 50),(1 &lt;= si &lt;= 200000)}  </p>
+        <h3 id="题意：">题意：</h3>
+<p>给 n 个物品，物品 i 有两个属性，wi和ti。有 m 个查询，查询包含两属性 mi 和 si，表示能否在<br> n 个物品种选取某几个使得 sum(wi)==mi &amp;&amp; sum(ti)==si,可以的话输出方案，不能输出“No solution!”。<br>数据范围：{ (1 &lt;= n &lt;= 400),(1 &lt;= m &lt;= 400),(1 &lt;= wi &lt;= 50),(1 &lt;= ti &lt;= 200000),(1 &lt;= mi &lt;= 50),(1 &lt;= si &lt;= 200000)}  </p>
 <hr>
-<p>分析：动态规划，普通方法超时超内存，所以要优化。<br>用 dp[x] 表示 mi==x 时 si 的状态，用bitset优化，记录路径时也要优化，每10个物品分一组记录，输出路径用dfs</p>
+<h3 id="分析：">分析：</h3>
+<p>动态规划，普通方法超时超内存，所以要优化。<br>用 dp[x] 表示 mi==x 时 si 的状态，用bitset优化，记录路径时也要优化，每10个物品分一组记录，输出路径用dfs</p>
 <hr>
 
         
@@ -460,9 +524,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题意：给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环<br>至少有一条边不一样。  </p>
+        <h3 id="题意：">题意：</h3>
+<p>给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环<br>至少有一条边不一样。  </p>
 <hr>
-<p>分析：n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归<br>输出即可。<br>
+<h3 id="分析：">分析：</h3>
+<p>n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归<br>输出即可。<br>
         
           <p class="article-more-link">
             <a href="/2014/09/25/Ural-1077-Travelling-Tours/#more">more >></a>
@@ -510,9 +576,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题意：给定一个凸多边形，给定一些点，查询这些点被多少个三角形包含  </p>
+        <h3 id="题意：">题意：</h3>
+<p>给定一个凸多边形，给定一些点，查询这些点被多少个三角形包含  </p>
 <hr>
-<p>分析：求出来不包含该点的三角形个数，用总个数减去这些即可。</p>
+<h3 id="分析：">分析：</h3>
+<p>求出来不包含该点的三角形个数，用总个数减去这些即可。</p>
 <hr>
 
         
@@ -562,9 +630,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题意：给定一个区间，求区间内满足条件的数字的个数。条件：数字 x 的每一位能被 x 整除。  </p>
+        <h3 id="题意：">题意：</h3>
+<p>给定一个区间，求区间内满足条件的数字的个数。条件：数字 x 的每一位能被 x 整除。  </p>
 <hr>
-<p>分析：数位dp，由题意可知，只要该数字能整除 1 到 9的最小公倍数（2520），那么肯定可以整除 1 到 9所有的数字。dp[i][st][j] 表示前 i 位，每位含有数字的状态位 st ，对 2520取余的余数。</p>
+<h3 id="分析：">分析：</h3>
+<p>数位dp，由题意可知，只要该数字能整除 1 到 9的最小公倍数（2520），那么肯定可以整除 1 到 9所有的数字。dp[i][st][j] 表示前 i 位，每位含有数字的状态位 st ，对 2520取余的余数。</p>
 <hr>
 
         
@@ -614,9 +684,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题意：给定一个棵树，树上每个节点不是黑色就是白色。删除 k 条边，使得构成的 k+1 个联通块，没个联通块只有一个黑色的点，求 k 条边的集合有多少种情况。  </p>
+        <h3 id="题意：">题意：</h3>
+<p>给定一个棵树，树上每个节点不是黑色就是白色。删除 k 条边，使得构成的 k+1 个联通块，没个联通块只有一个黑色的点，求 k 条边的集合有多少种情况。  </p>
 <hr>
-<p>分析：树形dp，dp[u][0]表示以 u 为跟的不包含黑色点的方案数，dp[u][1]表示以 u 为跟，包含一个黑色点的方案数。</p>
+<h3 id="分析：">分析：</h3>
+<p>树形dp，dp[u][0]表示以 u 为跟的不包含黑色点的方案数，dp[u][1]表示以 u 为跟，包含一个黑色点的方案数。</p>
 <hr>
 
         

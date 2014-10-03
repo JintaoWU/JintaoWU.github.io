@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: HDU | plutolove&#39;s Blog</title>
+  <title>Tag: SPOJ | plutolove&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="plutolove's Blog">
-<meta property="og:url" content="http://plutolove.github.io/tags/HDU/">
+<meta property="og:url" content="http://plutolove.github.io/tags/SPOJ/">
 <meta property="og:site_name" content="plutolove's Blog">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -162,15 +162,15 @@
 </nav>
       
   
-    <article id="post-2014-ACMICPC-Asia-Regional-Shanghai-Online-" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-SPOJ-375-Query-on-a-tree" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2014/09/27/2014-ACMICPC-Asia-Regional-Shanghai-Online-/" class="article-date">
-  	<time datetime="2014-09-27T09:23:13.000Z" itemprop="datePublished">Sep 27 2014</time>
+      <a href="/2014/10/03/SPOJ-375-Query-on-a-tree/" class="article-date">
+  	<time datetime="2014-10-03T12:21:12.000Z" itemprop="datePublished">Oct 3 2014</time>
 </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HDU/">HDU</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SPOJ/">SPOJ</a></li></ul>
 
     </div>
   
@@ -180,7 +180,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/27/2014-ACMICPC-Asia-Regional-Shanghai-Online-/">2014 ACM/ICPC Asia Regional Shanghai Online </a>
+      <a class="article-title" href="/2014/10/03/SPOJ-375-Query-on-a-tree/">SPOJ-375. Query on a tree</a>
     </h1>
   
 
@@ -188,16 +188,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1003-Contest"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5045" target="_blank" rel="external">1003-Contest</a></h3>
-<p>题意：n个学生，m个问题，所有人回答问题的次数差不能大于1，求最大答对期望。  </p>
-<p>分析：只有 10 个学生，状态压缩学生，dp[i][j] 表示第 i 个问题，状态为 j 的最大期望值。<br>dp[i][now|next]=max(dp[i][now|next],dp[i-1][s]+p[k+1][i]) 当now等于 (1&lt;&lt;n)-1 的时候now要变为0,意味着回答这个问题的人可以是任何人。</p>
+        <h3 id="题意:">题意:</h3>
+<p>给定一棵含有<code>n</code>个节点的树，有两种操作。</p>
+<ul>
+<li>CHANGE i ti (将第<code>i</code>条边的值变为<code>ti</code>)。</li>
+<li>QUERY a b (求<code>a</code>到<code>b</code>路径上权值最大的边)。</li>
+</ul>
 <hr>
-<h3 id="1004-Airport"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5046" target="_blank" rel="external">1004-Airport</a></h3>
-<p>题意：给 n 个城市，每个城市有一个坐标，要建 k 个飞机场，每个城市有一个value值，是这个城市到其他所有机场距离的最小值，求所有城市中 value 最大的最小值。  </p>
-<p>分析：二分+Dancing Links重复覆盖<br>
+<h3 id="分析：">分析：</h3>
+<p>树链剖分</p>
+<ul>
+<li><code>siz[u]</code>表示以<code>u</code>为根的子树的节点的个数。</li>
+<li><code>top[u]</code>表示所在链的端点。</li>
+<li><code>son[u]</code>表示<code>u</code>的子节点种<code>siz</code>值最大的点。</li>
+<li><code>dep[u]</code>表示<code>u</code>的深度。</li>
+<li><code>tid[u]</code>表示树变成链之后<code>u</code>的编号。
         
           <p class="article-more-link">
-            <a href="/2014/09/27/2014-ACMICPC-Asia-Regional-Shanghai-Online-/#more">more >></a>
+            <a href="/2014/10/03/SPOJ-375-Query-on-a-tree/#more">more >></a>
           </p>
         
       

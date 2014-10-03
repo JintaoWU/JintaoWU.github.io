@@ -5,21 +5,27 @@
   
   <title>Ural-1077. Travelling Tours | plutolove&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意：给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环至少有一条边不一样。  
+  <meta name="description" content="题意：
+给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环至少有一条边不一样。  
 
-分析：n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归输出即可。">
+分析：
+n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归输出即可。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ural-1077. Travelling Tours">
 <meta property="og:url" content="http://plutolove.github.io/2014/09/25/Ural-1077-Travelling-Tours/">
 <meta property="og:site_name" content="plutolove's Blog">
-<meta property="og:description" content="题意：给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环至少有一条边不一样。  
+<meta property="og:description" content="题意：
+给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环至少有一条边不一样。  
 
-分析：n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归输出即可。">
+分析：
+n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归输出即可。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ural-1077. Travelling Tours">
-<meta name="twitter:description" content="题意：给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环至少有一条边不一样。  
+<meta name="twitter:description" content="题意：
+给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环至少有一条边不一样。  
 
-分析：n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归输出即可。">
+分析：
+n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归输出即可。">
 
   
     <link rel="alternative" href="/atom.xml" title="plutolove&#39;s Blog" type="application/atom+xml">
@@ -119,7 +125,7 @@
 			
 			<section class="second-part">
 				<div class="widget tagcloud">
-					<a href="/tags/Codeforces/" style="font-size: 20.00px;">Codeforces</a><a href="/tags/HDU/" style="font-size: 10.00px;">HDU</a><a href="/tags/Ural/" style="font-size: 10.00px;">Ural</a><a href="/tags/ZOJ/" style="font-size: 10.00px;">ZOJ</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 10.00px;">others</a>
+					<a href="/tags/Codeforces/" style="font-size: 20.00px;">Codeforces</a><a href="/tags/HDU/" style="font-size: 10.00px;">HDU</a><a href="/tags/SPOJ/" style="font-size: 10.00px;">SPOJ</a><a href="/tags/Ural/" style="font-size: 10.00px;">Ural</a><a href="/tags/ZOJ/" style="font-size: 10.00px;">ZOJ</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 10.00px;">others</a>
 				</div>
 			</section>
 			
@@ -192,9 +198,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>题意：给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环<br>至少有一条边不一样。  </p>
+        <h3 id="题意：">题意：</h3>
+<p>给定一 n 个节点 m 条边的图，求出来环的个数最大，且每个环点的个数大于2,环 i 与其他 T-1 个环<br>至少有一条边不一样。  </p>
 <hr>
-<p>分析：n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归<br>输出即可。<br><a id="more"></a></p>
+<h3 id="分析：">分析：</h3>
+<p>n 个点 m 条边 p 个联通分量的图含有的环的个数是 m-n+p。先 dfs 求出来联通分量的个数，然后递归<br>输出即可。<br><a id="more"></a></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;vector&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">205</span>;</div><div class="line"><span class="stl_container"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;</span> g[N];</div><div class="line"><span class="keyword">int</span> n,m;</div><div class="line"><span class="keyword">int</span> <span class="built_in">stack</span>[N],lev[N];</div><div class="line"><span class="keyword">bool</span> vis[N];</div><div class="line"><span class="keyword">int</span> top;</div><div class="line"><span class="keyword">void</span> dfs(<span class="keyword">int</span> u) {</div><div class="line">    <span class="keyword">if</span>(vis[u]) <span class="keyword">return</span>;</div><div class="line">    vis[u]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)g[u].size();i++) {</div><div class="line">        <span class="keyword">int</span> v=g[u][i];</div><div class="line">        dfs(v);</div><div class="line">    }</div><div class="line">}</div><div class="line"><span class="keyword">void</span> print(<span class="keyword">int</span> u) {</div><div class="line">    <span class="built_in">stack</span>[++top]=u;</div><div class="line">    lev[u]=top;vis[u]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)g[u].size();i++) {</div><div class="line">        <span class="keyword">int</span> v=g[u][i];</div><div class="line">        <span class="keyword">if</span>(!vis[v]) print(v);</div><div class="line">        <span class="keyword">else</span> {</div><div class="line">            <span class="keyword">if</span>(lev[u]-lev[v]&gt;<span class="number">1</span>) {</div><div class="line">                <span class="built_in">cout</span>&lt;&lt;lev[u]-lev[v]+<span class="number">1</span>;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=lev[v];i&lt;=lev[u];i++) {</div><div class="line">                    <span class="built_in">cout</span>&lt;&lt;<span class="string">' '</span>&lt;&lt;<span class="built_in">stack</span>[i];</div><div class="line">                }</div><div class="line">                <span class="built_in">cout</span>&lt;&lt;endl;</div><div class="line">            }</div><div class="line">        }</div><div class="line">    }</div><div class="line">    top--;</div><div class="line">}</div><div class="line"><span class="keyword">int</span> main() {</div><div class="line">    <span class="preprocessor">#ifndef ONLINE_JUDGE</span></div><div class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,stdin);</div><div class="line">    <span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++) {</div><div class="line">        <span class="keyword">int</span> u,v;</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;u&gt;&gt;v;</div><div class="line">        g[u].push_back(v);</div><div class="line">        g[v].push_back(u);</div><div class="line">    }</div><div class="line">    <span class="keyword">int</span> tmp=<span class="number">0</span>;</div><div class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) {</div><div class="line">        <span class="keyword">if</span>(!vis[i]) dfs(i),tmp++;</div><div class="line">    }</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;m-n+tmp&lt;&lt;endl;</div><div class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</div><div class="line">    top=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) {</div><div class="line">        <span class="keyword">if</span>(!vis[i]) print(i);</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
 
 

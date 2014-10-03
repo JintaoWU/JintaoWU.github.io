@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://plutolove.github.io/2014/09/25/Ural-1077-Travelling-Tours/</loc>
+    <lastmod>2014-10-03T12:59:04.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://plutolove.github.io/2014/09/25/ZOJ-3812-We-Need-Medicine/</loc>
+    <lastmod>2014-10-03T12:58:23.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://plutolove.github.io/2014/09/25/Codeforces-E-Very-simple-problem/</loc>
+    <lastmod>2014-10-03T12:57:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://plutolove.github.io/2014/09/25/Codeforces-D-Beautiful-numbers/</loc>
+    <lastmod>2014-10-03T12:57:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://plutolove.github.io/2014/09/25/Codeforces-D-Appleman-and-Tree/</loc>
+    <lastmod>2014-10-03T12:57:42.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://plutolove.github.io/2014/10/03/SPOJ-375-Query-on-a-tree/</loc>
+    <lastmod>2014-10-03T12:53:59.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://plutolove.github.io/2014/09/29/Hexo-MathJax%E6%8F%92%E4%BB%B6-%E5%85%AC%E5%BC%8F%E7%BC%96%E8%BE%91/</loc>
     <lastmod>2014-09-29T16:32:10.000Z</lastmod>
   </url>
@@ -9,31 +39,6 @@
   <url>
     <loc>http://plutolove.github.io/2014/09/28/Codeforces-Round-268-(Div-2)C,D,E/</loc>
     <lastmod>2014-09-29T15:07:01.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://plutolove.github.io/2014/09/25/ZOJ-3812-We-Need-Medicine/</loc>
-    <lastmod>2014-09-28T14:44:21.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://plutolove.github.io/2014/09/25/Ural-1077-Travelling-Tours/</loc>
-    <lastmod>2014-09-28T14:44:10.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://plutolove.github.io/2014/09/25/Codeforces-E-Very-simple-problem/</loc>
-    <lastmod>2014-09-28T14:43:58.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://plutolove.github.io/2014/09/25/Codeforces-D-Beautiful-numbers/</loc>
-    <lastmod>2014-09-28T14:43:49.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://plutolove.github.io/2014/09/25/Codeforces-D-Appleman-and-Tree/</loc>
-    <lastmod>2014-09-28T14:43:41.000Z</lastmod>
   </url>
   
   <url>
