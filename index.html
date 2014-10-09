@@ -162,6 +162,69 @@
 </nav>
       
   
+    <article id="post-Codeforces-Round-271-(Div-2)" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/10/09/Codeforces-Round-271-(Div-2)/" class="article-date">
+  	<time datetime="2014-10-09T04:04:32.000Z" itemprop="datePublished">Oct 9 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/09/Codeforces-Round-271-(Div-2)/">Codeforces Round #271 (Div. 2)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="A-_Keyboard"><a href="http://codeforces.com/contest/474/problem/A" target="_blank" rel="external">A. Keyboard</a></h3>
+<h4 id="分析：">分析：</h4>
+<p>纯模拟  </p>
+<h4 id="solution"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474A.java?at=master" target="_blank" rel="external">solution</a></h4>
+<h3 id="B-_Worms"><a href="http://codeforces.com/contest/474/problem/B" target="_blank" rel="external">B. Worms</a></h3>
+<h4 id="分析：-1">分析：</h4>
+<p>二分  </p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474B.java?at=master" target="_blank" rel="external">solution</a></h4>
+<h3 id="C-_Captain_Marmot"><a href="http://codeforces.com/contest/474/problem/C" target="_blank" rel="external">C. Captain Marmot</a></h3>
+<h4 id="题意：">题意：</h4>
+<p>n次查询，每次输入<code>4</code>对点，<code>(xi,yi),(ai,bi)</code>,点<code>(xi,yi)</code>每次可以绕<code>(ai,bi)</code>旋转<code>90</code>度<br>问<code>4</code>个点<code>(xi,yi)</code>最少经过多少次旋转可以构成正方形，不能输出<code>-1</code>。</p>
+<hr>
+<h4 id="分析：-2">分析：</h4>
+<p>先预处理出来每个点每次旋转之后的位置，然后暴力枚举。</p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474C.cpp?at=master" target="_blank" rel="external">solution</a></h4>
+<p>
+        
+          <p class="article-more-link">
+            <a href="/2014/10/09/Codeforces-Round-271-(Div-2)/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-SPOJ-375-Query-on-a-tree" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -192,6 +255,8 @@
 <p>给定一棵含有<code>n</code>个节点的树，有两种操作。</p>
 <ul>
 <li>CHANGE i ti (将第<code>i</code>条边的值变为<code>ti</code>)。</li>
+</ul>
+<ul>
 <li>QUERY a b (求<code>a</code>到<code>b</code>路径上权值最大的边)。</li>
 </ul>
 <hr>
@@ -199,6 +264,8 @@
 <p>树链剖分</p>
 <ul>
 <li><code>siz[u]</code>表示以<code>u</code>为根的子树的节点的个数。</li>
+</ul>
+<ul>
 <li><code>top[u]</code>表示所在链的端点。</li>
 <li><code>son[u]</code>表示<code>u</code>的子节点种<code>siz</code>值最大的点。</li>
 <li><code>dep[u]</code>表示<code>u</code>的深度。</li>
@@ -658,60 +725,10 @@
 
 
   
-    <article id="post-Codeforces-D-Appleman-and-Tree" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2014/09/25/Codeforces-D-Appleman-and-Tree/" class="article-date">
-  	<time datetime="2014-09-25T12:17:39.000Z" itemprop="datePublished">Sep 25 2014</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/25/Codeforces-D-Appleman-and-Tree/">Codeforces D. Appleman and Tree</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="题意：">题意：</h3>
-<p>给定一个棵树，树上每个节点不是黑色就是白色。删除 k 条边，使得构成的 k+1 个联通块，没个联通块只有一个黑色的点，求 k 条边的集合有多少种情况。  </p>
-<hr>
-<h3 id="分析：">分析：</h3>
-<p>树形dp，dp[u][0]表示以 u 为跟的不包含黑色点的方案数，dp[u][1]表示以 u 为跟，包含一个黑色点的方案数。</p>
-<hr>
-
-        
-          <p class="article-more-link">
-            <a href="/2014/09/25/Codeforces-D-Appleman-and-Tree/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 

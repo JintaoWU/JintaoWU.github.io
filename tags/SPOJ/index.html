@@ -192,6 +192,8 @@
 <p>给定一棵含有<code>n</code>个节点的树，有两种操作。</p>
 <ul>
 <li>CHANGE i ti (将第<code>i</code>条边的值变为<code>ti</code>)。</li>
+</ul>
+<ul>
 <li>QUERY a b (求<code>a</code>到<code>b</code>路径上权值最大的边)。</li>
 </ul>
 <hr>
@@ -199,6 +201,8 @@
 <p>树链剖分</p>
 <ul>
 <li><code>siz[u]</code>表示以<code>u</code>为根的子树的节点的个数。</li>
+</ul>
+<ul>
 <li><code>top[u]</code>表示所在链的端点。</li>
 <li><code>son[u]</code>表示<code>u</code>的子节点种<code>siz</code>值最大的点。</li>
 <li><code>dep[u]</code>表示<code>u</code>的深度。</li>

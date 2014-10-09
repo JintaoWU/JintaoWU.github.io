@@ -3,17 +3,56 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Codeforces | plutolove&#39;s Blog</title>
+  <title>Codeforces Round #271 (Div. 2) | plutolove&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="plutolove's Blog">
-<meta property="og:url" content="http://plutolove.github.io/tags/Codeforces/">
+  <meta name="description" content="A. Keyboard
+分析：
+纯模拟  
+solution
+B. Worms
+分析：
+二分  
+solution
+C. Captain Marmot
+题意：
+n次查询，每次输入4对点，(xi,yi),(ai,bi),点(xi,yi)每次可以绕(ai,bi)旋转90度问4个点(xi,yi)最少经过多少次旋转可以构成正方形，不能输出-1。
+
+分析：
+先预处理出来每个点每次旋转之后的位置，然后暴力枚举">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round #271 (Div. 2)">
+<meta property="og:url" content="http://plutolove.github.io/2014/10/09/Codeforces-Round-271-(Div-2)/">
 <meta property="og:site_name" content="plutolove's Blog">
-<meta property="og:description">
+<meta property="og:description" content="A. Keyboard
+分析：
+纯模拟  
+solution
+B. Worms
+分析：
+二分  
+solution
+C. Captain Marmot
+题意：
+n次查询，每次输入4对点，(xi,yi),(ai,bi),点(xi,yi)每次可以绕(ai,bi)旋转90度问4个点(xi,yi)最少经过多少次旋转可以构成正方形，不能输出-1。
+
+分析：
+先预处理出来每个点每次旋转之后的位置，然后暴力枚举">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="plutolove's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Codeforces Round #271 (Div. 2)">
+<meta name="twitter:description" content="A. Keyboard
+分析：
+纯模拟  
+solution
+B. Worms
+分析：
+二分  
+solution
+C. Captain Marmot
+题意：
+n次查询，每次输入4对点，(xi,yi),(ai,bi),点(xi,yi)每次可以绕(ai,bi)旋转90度问4个点(xi,yi)最少经过多少次旋转可以构成正方形，不能输出-1。
+
+分析：
+先预处理出来每个点每次旋转之后的位置，然后暴力枚举">
 
   
     <link rel="alternative" href="/atom.xml" title="plutolove&#39;s Blog" type="application/atom+xml">
@@ -160,9 +199,7 @@
 		</header>				
 	</div>
 </nav>
-      
-  
-    <article id="post-Codeforces-Round-271-(Div-2)" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-Codeforces-Round-271-(Div-2)" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2014/10/09/Codeforces-Round-271-(Div-2)/" class="article-date">
@@ -179,8 +216,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/09/Codeforces-Round-271-(Div-2)/">Codeforces Round #271 (Div. 2)</a>
+    <h1 class="article-title" itemprop="name">
+      Codeforces Round #271 (Div. 2)
     </h1>
   
 
@@ -203,12 +240,30 @@
 <h4 id="分析：-2">分析：</h4>
 <p>先预处理出来每个点每次旋转之后的位置，然后暴力枚举。</p>
 <h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474C.cpp?at=master" target="_blank" rel="external">solution</a></h4>
-<p>
-        
-          <p class="article-more-link">
-            <a href="/2014/10/09/Codeforces-Round-271-(Div-2)/#more">more >></a>
-          </p>
-        
+<p><a id="more"></a></p>
+<h3 id="D-_Flowers"><a href="http://codeforces.com/contest/474/problem/D" target="_blank" rel="external">D. Flowers</a></h3>
+<h4 id="题意：-1">题意：</h4>
+<p><code>Marmot</code>吃两种类型的花：<code>red</code>或者<code>white</code>,如果要吃到<code>white</code>这种花，就需要吃连续<code>k</code>朵<code>white</code>；而如果吃 <code>red</code>，就没有这种限制。给定区间<code>[a, b]</code>，问总共的吃法有多少种。</p>
+<hr>
+<h4 id="分析：-3">分析：</h4>
+<p>动态规划，<code>dp[i]=dp[i-1]+dp[i-k]</code>表示<code>i</code>朵花的吃法，然后维护前缀和即可。</p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474D.cpp?at=master" target="_blank" rel="external">solution</a></h4>
+<h3 id="E-_Pillars"><a href="http://codeforces.com/contest/474/problem/E" target="_blank" rel="external">E. Pillars</a></h3>
+<h4 id="题意：-2">题意：</h4>
+<hr>
+<p><code>n</code>个柱子，每个柱子高度为<code>hi</code>，从<code>i</code>跳到<code>j</code>当且仅当<code>i&lt;j</code>而且<code>|hi-hj|&gt;=d</code>，给定<code>d</code>，求最多条多少个柱子，输出路径。</p>
+<hr>
+<h4 id="分析：-4">分析：</h4>
+<p><code>dp[i]</code>表示跳到<code>i</code>位置经过的柱子的最大个数。直接做会超时，用线段树优化。<br>首先对柱子的高度离散化，然后用线段树表示@高度区间<code>[l,r]</code>经过的最大的柱子的个数即可。</p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/cf474E.cpp?at=master" target="_blank" rel="external">solution</a></h4>
+<h3 id="F-_Ant_colony"><a href="http://codeforces.com/contest/474/problem/F" target="_blank" rel="external">F. Ant colony</a></h3>
+<h4 id="题意：-3">题意：</h4>
+<p><code>n</code>只蚂蚁，每只有一个<code>s[i]</code>，有<code>t</code>个查询，查询区间<code>[l,r]</code>可以吃的蚂蚁数量。<br>(蚂蚁<code>i</code>和<code>j</code>fight，如果<code>s[i]</code>是<code>s[j]</code>的因子，那么蚂蚁<code>i</code>的积分增加<code>1</code>,区间[l,r],<br>如果蚂蚁<code>i</code>的积分等于<code>r-l</code>那么这只蚂蚁被踢出去)。</p>
+<hr>
+<h4 id="分析：-5">分析：</h4>
+<p>区间<code>[l,r]</code>的最大公约数不等于区间<code>[l,r]</code>的最小值，那么对于每个<code>s[i]</code>至少存在一个<code>s[j]</code>不是他的因子。<br>所以用线段树维护区间<code>[l,r]</code>的<code>gcd</code>，区间最小值<code>minv</code>还有区间最小值的个数<code>cont</code>。</p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/cf474F.cpp?at=master" target="_blank" rel="external">solution</a></h4>
+
       
     </div>
     <footer class="article-footer">
@@ -217,231 +272,58 @@
     </footer>
   </div>
   
-</article>
-
-
-
-
-
-
-  
-    <article id="post-Codeforces-Round-268-(Div-2)C,D,E" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/09/28/Codeforces-Round-268-(Div-2)C,D,E/" class="article-date">
-  	<time datetime="2014-09-28T12:53:21.000Z" itemprop="datePublished">Sep 28 2014</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/28/Codeforces-Round-268-(Div-2)C,D,E/">Codeforces Round #268 (Div. 2)</a>
-    </h1>
   
+    <a href="/2014/10/03/SPOJ-375-Query-on-a-tree/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SPOJ-375. Query on a tree</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="C-_24_Game"><a href="http://codeforces.com/contest/469/problem/C" target="_blank" rel="external">C. 24 Game</a></h3>
-<p>题意：给定 1～n，n 个数字，从中选取 2 个a,b,并删除a,b。令c=a + b, or a - b, or a × b 。<br>将c插入序列，进行n-1次操作之后，让剩下的数字等于24，不能输出”NO”,可以输出”YES”并且输出步骤。  </p>
-<p>分析：找规律，当 n 小于4肯定不可以，否则都可以。</p>
-<hr>
-<h3 id="D-_Two_Sets"><a href="http://codeforces.com/contest/469/problem/D" target="_blank" rel="external">D. Two Sets</a></h3>
-<p>题意：给定 n 个数字还有 a 和 b ，将n个数字分成两个集合，使得 A 集合中的每个数字 x ，a-x<br>也在 A 集合中，B也一样。  </p>
-<p>分析：并查集，对于 x 如果 a-x 不存在那么，x 一定属于B集合，如果 b-x 不存在，那么 x 一定<br>属于 B 集合，否则都有可能。<br>
-        
-          <p class="article-more-link">
-            <a href="/2014/09/28/Codeforces-Round-268-(Div-2)C,D,E/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
   
 </article>
 
 
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
-
-  
-    <article id="post-Codeforces-E-Very-simple-problem" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/09/25/Codeforces-E-Very-simple-problem/" class="article-date">
-  	<time datetime="2014-09-25T12:21:12.000Z" itemprop="datePublished">Sep 25 2014</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/25/Codeforces-E-Very-simple-problem/">Codeforces-E. Very simple problem</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="题意：">题意：</h3>
-<p>给定一个凸多边形，给定一些点，查询这些点被多少个三角形包含  </p>
-<hr>
-<h3 id="分析：">分析：</h3>
-<p>求出来不包含该点的三角形个数，用总个数减去这些即可。</p>
-<hr>
-
-        
-          <p class="article-more-link">
-            <a href="/2014/09/25/Codeforces-E-Very-simple-problem/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Codeforces-Round-271-(Div-2)" data-title="Codeforces Round #271 (Div. 2)" data-url="http://plutolove.github.io/2014/10/09/Codeforces-Round-271-(Div-2)/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
-
-
-
-
-  
-    <article id="post-Codeforces-D-Beautiful-numbers" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/09/25/Codeforces-D-Beautiful-numbers/" class="article-date">
-  	<time datetime="2014-09-25T12:20:06.000Z" itemprop="datePublished">Sep 25 2014</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/25/Codeforces-D-Beautiful-numbers/">Codeforces-D. Beautiful numbers</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="题意：">题意：</h3>
-<p>给定一个区间，求区间内满足条件的数字的个数。条件：数字 x 的每一位能被 x 整除。  </p>
-<hr>
-<h3 id="分析：">分析：</h3>
-<p>数位dp，由题意可知，只要该数字能整除 1 到 9的最小公倍数（2520），那么肯定可以整除 1 到 9所有的数字。dp[i][st][j] 表示前 i 位，每位含有数字的状态位 st ，对 2520取余的余数。</p>
-<hr>
-
-        
-          <p class="article-more-link">
-            <a href="/2014/09/25/Codeforces-D-Beautiful-numbers/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-Codeforces-D-Appleman-and-Tree" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/09/25/Codeforces-D-Appleman-and-Tree/" class="article-date">
-  	<time datetime="2014-09-25T12:17:39.000Z" itemprop="datePublished">Sep 25 2014</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/25/Codeforces-D-Appleman-and-Tree/">Codeforces D. Appleman and Tree</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="题意：">题意：</h3>
-<p>给定一个棵树，树上每个节点不是黑色就是白色。删除 k 条边，使得构成的 k+1 个联通块，没个联通块只有一个黑色的点，求 k 条边的集合有多少种情况。  </p>
-<hr>
-<h3 id="分析：">分析：</h3>
-<p>树形dp，dp[u][0]表示以 u 为跟的不包含黑色点的方案数，dp[u][1]表示以 u 为跟，包含一个黑色点的方案数。</p>
-<hr>
-
-        
-          <p class="article-more-link">
-            <a href="/2014/09/25/Codeforces-D-Appleman-and-Tree/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-  
 
 
       <footer id="footer">
