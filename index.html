@@ -1,92 +1,353 @@
-CTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-		<base href="http://www.ahnu.edu.cn/newHome/" />
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-		<meta name="renderer" content="webkit">
-		<title>安徽师范大学</title>
-		<link href="css/index.css" type="text/css" rel="stylesheet"/>
-			<!--[if IE 6]>
-			<script src="js/DD_belatedPNG.js"></script>
-			<script type="text/javascript">
-			DD_belatedPNG.fix('*');
-			</script>
-			<![endif]-->
 
-			<!--
-	   	**Design:Steven
-			**Author:Gordon
-				**Editor:Xipeng,Chenyebin,Liuchao,Wangzhengdong
-					**技术支持：中梦科技
-					    **版权所有：安徽师范大学信息管理中心
-			-->
-			<script src="js/jquery.min.js"></script>
-	</head>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Codeforces Round #271 (Div. 2) | plutolove&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A. Keyboard
+分析：
+纯模拟  
+solution
+B. Worms
+分析：
+二分  
+solution
+C. Captain Marmot
+题意：
+n次查询，每次输入4对点，(xi,yi),(ai,bi),点(xi,yi)每次可以绕(ai,bi)旋转90度问4个点(xi,yi)最少经过多少次旋转可以构成正方形，不能输出-1。
 
-	<body>
-			<!--tophead-->
-				<div class="tophead">
-							<div class="topheadshow">
-											<div class="left">
-																<a href="http://www.ahnu.edu.cn/" title="">网站首页</a>
-																				<!--remarked by chenyebin<span>|</span>-->
-																								<!-- <a style="font-family: 'Arial';" href="" title="">International</a> -->
-																												<!--remarked by chenyebin<a style="font-family: 'Arial'; font-weight:bold;" href="http://www.ahnu.edu.cn/home/" target="_blank" title="旧版主页">旧版主页</a>-->
-																															</div>
-																																		<div class="right">
-																																							<div class="searchbox">
-																																													<form action="http://www.ahnu.edu.cn/search" method="get" target="_blank">
-																																																				<input name="keyword" type="text" class="searchtext" value="校内搜索">
-																																																										<input type="hidden" name="option" id="option" value="all" />
-																																																																<input type="submit" class="searchsub" value="" >
-																																																																					</form>
-																																																																				</div>
-																																																																								<div class="portal">
-																																																																														<div class="wordbox">
-																																																																																					<!--<span><a href="http://my.ahnu.edu.cn/" target="_blank">信息门户</a></span>-->
-																																																																																											<span><a href="http://my.ahnu.edu.cn/" target="_blank">信息门户</a></span>
-																																																																																																	<div class="wordboxicon"></div>
-																																																																																																						</div>
-																																																																																																										</div>
-																																																																																																														<div class="portal">
-																																																																																																																				<div class="wordbox">
-																																																																																																																											<!--<span><a href="http://my.ahnu.edu.cn/" target="_blank">信息门户</a></span>-->
-																																																																																																																																	<span><a href="http://my.ahnu.edu.cn/index.portal?.pn=p111" target="_blank">学子心声</a></span>
-																																																																																																																																							<div class="wordboxicon"></div>
-																																																																																																																																												</div>
-																																																																																																																																																</div>
-																																																																																																																																																				<div class="rightlist department">
-																																																																																																																																																										<div class="wordbox">
-																																																																																																																																																																	<!--<span>学校院系</span>-->
-																																																																																																																																																																							<span>新闻中心</span>
-																																																																																																																																																																													<div class="wordboxicon"></div>
-																																																																																																																																																																																		</div>
-																																																																																																																																																																																							<!--<div class="rightlistbox departmentbox">-->
-																																																																																																																																																																																													<!--<div class="fl" style="width:100%;height:19px;"></div>-->
-																																																																																																																																																																																																			<!--<a  href="http://wxy.ahnu.edu.cn/" title="文学院" target="_blank">文学院</a>-->
-																																																																																																																																																																																																									<!--<a  href="http://ty.ahnu.edu.cn/" title="体育学院" target="_blank">体育学院</a>-->
-																																																																																																																																																																																																															<!--<a  href="http://politics.ahnu.edu.cn/" title="马克思主义学院" target="_blank">马克思主义学院</a>-->
-																																																																																																																																																																																																																					<!--<a  href="http://chm.ahnu.edu.cn/" title="新闻与传播学院" target="_blank">新闻与传播学院</a>-->
-																																																																																																																																																																																																																											<!--<a  href="http://law.ahnu.edu.cn/" title="法学院" target="_blank">法学院</a>-->
-																																																																																																																																																																																																																																	<!--<a  href="http://math.ahnu.edu.cn/" title="数学计算机科学学院" target="_blank">数学计算机科学学院</a>-->
-																																																																																																																																																																																																																																							<!--<a  href="http://ahnujgxy.ahnu.edu.cn/" title="经济管理学院" target="_blank">经济管理学院</a>-->
-																																																																																																																																																																																																																																													<!--<a  href="http://physics.ahnu.edu.cn/" title="物理与电子信息学院" target="_blank">物理与电子信息学院</a>-->
-																																																																																																																																																																																																																																																			<!--<a  href="http://music.ahnu.edu.cn/" title="音乐学院" target="_blank">音乐学院</a>-->
-																																																																																																																																																																																																																																																									<!--<a  href="http://chem.ahnu.edu.cn/" title="化学与材料科学学院" target="_blank">化学与材料科学学院</a>-->
-																																																																																																																																																																																																																																																															<!--<a  href="http://msxy.ahnu.edu.cn/" title="美术学院" target="_blank">美术学院</a>-->
-																																																																																																																																																																																																																																																																					<!--<a  href="http://tourism.ahnu.edu.cn/" title="国土资源与旅游学院" target="_blank">国土资源与旅游学院</a>-->
-																																																																																																																																																																																																																																																																											<!--<a  href="http://social.ahnu.edu.cn/" title="历史与社会学院" target="_blank">历史与社会学院</a>-->
-																																																																																																																																																																																																																																																																																	<!--<a  href="http://biology.ahnu.edu.cn/" title="生命科学学院" target="_blank">生命科学学院</a>--/view" title="校区全景"  target="_blank">校区全景</a>
-																																			 				</nk">课程观摩</a>
-																																												</div>	
-																																																	<div class="hrefbox2">
-																																																					¦记顾家山、副书记李琳琦陪同调研。
-																																																																																																																																																																																																																																																																																	-->
-																																																																																																																																																																																																																																																																																								<!--"newslisttime">
-																																													[10-21]
-																																																					</span>
-																																																												</div>
-																																																													70004.js' type='text/javascript'%3E%3C/script%3E"));</script>
+分析：
+先预处理出来每个点每次旋转之后的位置，然后暴力枚举">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round #271 (Div. 2)">
+<meta property="og:url" content="http://plutolove.github.io/2014/10/09/Codeforces-Round-271-(Div-2)/">
+<meta property="og:site_name" content="plutolove's Blog">
+<meta property="og:description" content="A. Keyboard
+分析：
+纯模拟  
+solution
+B. Worms
+分析：
+二分  
+solution
+C. Captain Marmot
+题意：
+n次查询，每次输入4对点，(xi,yi),(ai,bi),点(xi,yi)每次可以绕(ai,bi)旋转90度问4个点(xi,yi)最少经过多少次旋转可以构成正方形，不能输出-1。
+
+分析：
+先预处理出来每个点每次旋转之后的位置，然后暴力枚举">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Codeforces Round #271 (Div. 2)">
+<meta name="twitter:description" content="A. Keyboard
+分析：
+纯模拟  
+solution
+B. Worms
+分析：
+二分  
+solution
+C. Captain Marmot
+题意：
+n次查询，每次输入4对点，(xi,yi),(ai,bi),点(xi,yi)每次可以绕(ai,bi)旋转90度问4个点(xi,yi)最少经过多少次旋转可以构成正方形，不能输出-1。
+
+分析：
+先预处理出来每个点每次旋转之后的位置，然后暴力枚举">
+
+  
+    <link rel="alternative" href="/atom.xml" title="plutolove&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <meta name="baidu-site-verification" content="CntQ3tYCKP" />
+  <meta name="msvalidate.01" content="F3688EA880CE32DA55C52E5F38AE9D19" />
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://avatars2.githubusercontent.com/u/8512477">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">plutolove</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
 					
+						<li><a href="/">主页</a></li>
+			        
+						<li><a href="/archives">所有文章</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/plutolove" title="github">github</a>
+				        
+							<a class="facebook" target="_blank" href="https://www.facebook.com/mengshangqi" title="facebook">facebook</a>
+				        
+							<a class="google" target="_blank" href="https://plus.google.com" title="google">google</a>
+				        
+							<a class="twitter" target="_blank" href="https://twitter.com/mengshangqi" title="twitter">twitter</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="/tags/Codeforces/" style="font-size: 20.00px;">Codeforces</a><a href="/tags/HDU/" style="font-size: 10.00px;">HDU</a><a href="/tags/SPOJ/" style="font-size: 10.00px;">SPOJ</a><a href="/tags/Ural/" style="font-size: 10.00px;">Ural</a><a href="/tags/ZOJ/" style="font-size: 10.00px;">ZOJ</a><a href="/tags/graphs/" style="font-size: 10.00px;">graphs</a><a href="/tags/others/" style="font-size: 10.00px;">others</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars2.githubusercontent.com/u/8512477">
+			</div>
 
+			<hgroup>
+			  <h1 class="header-author"><a href="/">plutolove</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/plutolove" title="github">github</a>
+			        
+						<a class="facebook" target="_blank" href="https://www.facebook.com/mengshangqi" title="facebook">facebook</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com" title="google">google</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/mengshangqi" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-Codeforces-Round-271-(Div-2)" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/10/09/Codeforces-Round-271-(Div-2)/" class="article-date">
+  	<time datetime="2014-10-09T04:04:32.000Z" itemprop="datePublished">Oct 9 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Codeforces Round #271 (Div. 2)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="A-_Keyboard"><a href="http://codeforces.com/contest/474/problem/A" target="_blank" rel="external">A. Keyboard</a></h3>
+<h4 id="分析：">分析：</h4>
+<p>纯模拟  </p>
+<h4 id="solution"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474A.java?at=master" target="_blank" rel="external">solution</a></h4>
+<h3 id="B-_Worms"><a href="http://codeforces.com/contest/474/problem/B" target="_blank" rel="external">B. Worms</a></h3>
+<h4 id="分析：-1">分析：</h4>
+<p>二分  </p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474B.java?at=master" target="_blank" rel="external">solution</a></h4>
+<h3 id="C-_Captain_Marmot"><a href="http://codeforces.com/contest/474/problem/C" target="_blank" rel="external">C. Captain Marmot</a></h3>
+<h4 id="题意：">题意：</h4>
+<p>n次查询，每次输入<code>4</code>对点，<code>(xi,yi),(ai,bi)</code>,点<code>(xi,yi)</code>每次可以绕<code>(ai,bi)</code>旋转<code>90</code>度<br>问<code>4</code>个点<code>(xi,yi)</code>最少经过多少次旋转可以构成正方形，不能输出<code>-1</code>。</p>
+<hr>
+<h4 id="分析：-2">分析：</h4>
+<p>先预处理出来每个点每次旋转之后的位置，然后暴力枚举。</p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474C.cpp?at=master" target="_blank" rel="external">solution</a></h4>
+<p><a id="more"></a></p>
+<h3 id="D-_Flowers"><a href="http://codeforces.com/contest/474/problem/D" target="_blank" rel="external">D. Flowers</a></h3>
+<h4 id="题意：-1">题意：</h4>
+<p><code>Marmot</code>吃两种类型的花：<code>red</code>或者<code>white</code>,如果要吃到<code>white</code>这种花，就需要吃连续<code>k</code>朵<code>white</code>；而如果吃 <code>red</code>，就没有这种限制。给定区间<code>[a, b]</code>，问总共的吃法有多少种。</p>
+<hr>
+<h4 id="分析：-3">分析：</h4>
+<p>动态规划，<code>dp[i]=dp[i-1]+dp[i-k]</code>表示<code>i</code>朵花的吃法，然后维护前缀和即可。</p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/CF474D.cpp?at=master" target="_blank" rel="external">solution</a></h4>
+<h3 id="E-_Pillars"><a href="http://codeforces.com/contest/474/problem/E" target="_blank" rel="external">E. Pillars</a></h3>
+<h4 id="题意：-2">题意：</h4>
+<p><code>n</code>个柱子，每个柱子高度为<code>hi</code>，从<code>i</code>跳到<code>j</code>当且仅当<code>i&lt;j</code>而且<code>|hi-hj|&gt;=d</code>，给定<code>d</code>，求最多条多少个柱子，输出路径。</p>
+<hr>
+<h4 id="分析：-4">分析：</h4>
+<p><code>dp[i]</code>表示跳到<code>i</code>位置经过的柱子的最大个数。直接做会超时，用线段树优化。<br>首先对柱子的高度离散化，然后用线段树表示@高度区间<code>[l,r]</code>经过的最大的柱子的个数即可。</p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/cf474E.cpp?at=master" target="_blank" rel="external">solution</a></h4>
+<h3 id="F-_Ant_colony"><a href="http://codeforces.com/contest/474/problem/F" target="_blank" rel="external">F. Ant colony</a></h3>
+<h4 id="题意：-3">题意：</h4>
+<p><code>n</code>只蚂蚁，每只有一个<code>s[i]</code>，有<code>t</code>个查询，查询区间<code>[l,r]</code>可以吃的蚂蚁数量。<br>(蚂蚁<code>i</code>和<code>j</code>fight，如果<code>s[i]</code>是<code>s[j]</code>的因子，那么蚂蚁<code>i</code>的积分增加<code>1</code>,区间[l,r],<br>如果蚂蚁<code>i</code>的积分等于<code>r-l</code>那么这只蚂蚁被踢出去)。</p>
+<hr>
+<h4 id="分析：-5">分析：</h4>
+<p>区间<code>[l,r]</code>的最大公约数不等于区间<code>[l,r]</code>的最小值，那么对于每个<code>s[i]</code>至少存在一个<code>s[j]</code>不是他的因子。<br>所以用线段树维护区间<code>[l,r]</code>的<code>gcd</code>，区间最小值<code>minv</code>还有区间最小值的个数<code>cont</code>。</p>
+<h4 id="solution-1"><a href="https://bitbucket.org/plutolove/code/src/7a43b6acd8cf1d516e4c915973ba1bb9c0e63c16/cf474F.cpp?at=master" target="_blank" rel="external">solution</a></h4>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/10/03/SPOJ-375-Query-on-a-tree/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SPOJ-375. Query on a tree</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Codeforces-Round-271-(Div-2)" data-title="Codeforces Round #271 (Div. 2)" data-url="http://plutolove.github.io/2014/10/09/Codeforces-Round-271-(Div-2)/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2014 plutolove
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="/js/main.js" type="text/javascript"></script>
+
+
+
+  </div>
+</body>
+</html>
